@@ -1,0 +1,147 @@
+1. Crie uma classe para representar uma pessoa, com os atributos privados de nome, idade e
+altura. Crie os métodos públicos necessários para setters e getters e também um método
+para imprimir os dados de uma pessoa.
+
+public class App {
+    public static void main(String[] args) throws Exception {
+    
+        Pessoa p1 = new Pessoa();
+        p1.setPeso(70);
+        p1.setAltura(1.70f);
+        p1.calcularIMC(); 
+        System.out.println(p1.calcularIMC());
+        p1.display();
+        p1.setIdade(33);
+        p1.setNome("Marlon");
+        p1.display();
+    
+    }
+}
+
+class Pessoa{
+    private String nome;
+    private int idade;
+    private float altura;
+    private int peso;
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public void setPeso(int peso){
+        this.peso = peso;
+    }
+
+    public void setAltura(float altura){
+        this.altura = altura;
+    }
+
+    public void setIdade(int idade){
+        this.idade = idade;
+    }
+
+    public String getNome(){
+        return nome;
+    }
+
+    public float getAltura(){
+        return altura;
+    }
+
+    public int getIdade(){
+        return idade;
+    }
+
+    public int getPeso(){
+        return peso;
+    }
+
+    public void display(){
+        System.out.println(nome + " tem a idade de: " + idade + " e sua altura é: " + altura);
+    }
+
+    public float calcularIMC(){
+        float imc = peso/(altura*altura);
+        return imc;
+    }
+}
+
+2. Crie uma classe Agenda que pode armazenar 10 pessoas que possa realizar as seguintes
+operações:
+a) void armazenaPessoa(String nome, int idade, float altura);
+b) void removePessoa(String nome);
+c) int buscaPessoa(String nome); // informa em que posição da agenda está a pessoa
+d) void imprimeAgenda(); // imprime os dados de todas as pessoas da agenda
+e) void imprimePessoa(int index); // imprime os dados da pessoa que está na posição
+“i” da agenda.
+
+
+public void armazenaPessoa(String nome, int idade, float altura){
+    if(totalPessoas<10){
+        nomes[totalPessoas] = nome;
+        idades[totalPessoas] = idade;
+        alturas[totalPessoas] = altura;
+        totalPessoas++;
+        System.out.println("Nome: " + nomes[totalPessoas] + "idade: " + idades[totalPessoas] );
+    }
+    else{
+        System.out.println("Agenda cheia");
+    }
+}
+
+
+3.
+  public static void main(String[] args) throws Exception {
+        Elevador predio = new Elevador();
+        predio.entrar();
+       
+        predio.sai();
+         predio.entrar();
+         predio.entrar();
+         predio.entrar();
+        predio.entrar();
+        predio.sai();
+        predio.setAndarAtual(3);
+        
+    }
+}
+
+ class Elevador{
+    private int andarAtual;
+    private int totalAndar;
+    private int capElevador;
+    private int qtdPessoas;
+    
+    public void inicializar( int capElevador, int totalAndar){
+
+    }
+
+    public void entrar(){
+        if(qtdPessoas>capElevador){
+            System.out.println("Elvador cheio");
+        }
+        else{
+            qtdPessoas++;
+            capElevador++;
+            System.out.println(capElevador);
+        }
+    }
+
+    public void sai(){
+        if(capElevador>0){
+            qtdPessoas--;
+            capElevador--;
+            System.out.println(capElevador);
+
+        }
+        else{
+            System.out.println("Nao pode sair");
+        }
+    }
+
+    public void setAndarAtual(int andarAtual){
+        this.andarAtual = andarAtual;
+
+    }
+
+ }

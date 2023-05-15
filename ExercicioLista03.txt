@@ -1,0 +1,165 @@
+1. Escreva um algoritmo que leia 20 números do usuário e exiba quantos números são maiores do que 8. 
+
+    public static void main(String[] args) throws Exception {
+    
+    int numero =0;
+    int cont =0;
+    int i;
+    Scanner sc = new Scanner(System.in);
+    for(i=0; i<20; i++){
+        System.out.println("Insira o numero:");
+        numero = sc.nextInt();
+        if(numero > 8){
+            cont++;
+        }
+    }
+    System.out.println(cont);
+
+    }
+
+2. Escreva um algoritmo que leia 20 números do usuário e exiba quantos números são pares 
+
+    public static void main(String[] args) throws Exception {
+    
+    int numero =0;
+    int cont =0;
+    int i;
+    Scanner sc = new Scanner(System.in);
+    for(i=0; i<3; i++){
+        System.out.println("Insira o numero:");
+        numero = sc.nextInt();
+        if(numero %2 == 0){
+            cont++;
+        }
+    }
+    System.out.println(cont);
+
+ }
+
+3. Faça um algoritmo que leia 20 números e, ao final, escreva quantos estão entre 0 e 100. 
+
+    public static void main(String[] args) throws Exception {
+    
+    int numero =0;
+    int cont =0;
+    int i;
+    Scanner sc = new Scanner(System.in);
+    for(i=0; i<20; i++){
+        System.out.println("Insira o numero:");
+        numero = sc.nextInt();
+        if(numero > 0 & numero < 100){
+            cont++;
+        }
+    }
+    System.out.println(cont);
+
+    }
+
+4.  Faça um algoritmo que leia 20 números e, ao final, escreva quantos estão entre 0 e 100, quantos estão entre 101 e 200 e quantos são maiores de 200. 
+
+    public static void main(String[] args) throws Exception {
+    
+        int numero =0;
+        int cont =0;
+        int contCem = 0;
+        int contDuz = 0;
+        int i;
+        Scanner sc = new Scanner(System.in);
+        for(i=0; i<3; i++){
+            System.out.println("Insira o numero:");
+            numero = sc.nextInt();
+            if(numero > 0 & numero <= 100){
+                cont++;
+            }
+            else if(numero > 100 & numero <= 200){
+                contCem++;
+            }
+            else{
+                contDuz++;
+            }
+        }
+        System.out.println(cont);
+        System.out.println(contCem);
+        System.out.println(contDuz);
+
+    }
+
+5. Escreva um algoritmo que leia uma sequência de números do usuário e realize a soma desses números. Encerre a execução quando um número negativo for digitado.
+
+
+6.
+  public static void main(String[] args) throws Exception {
+    
+        Scanner sc = new Scanner(System.in);
+        int numero = 0;
+        System.out.println("Insira um numero: ");
+        numero = sc.nextInt();
+        if(numero >= 100 && numero <= 200){
+            System.out.println("O numero " + numero +" esta entre 100 e 200");
+        }
+        else{
+            System.out.println("O numero esta fora do intervalo");
+        }
+        
+    }
+    }
+
+7.
+public static void main(String[] args) throws Exception {
+    
+       Scanner sc = new Scanner(System.in);
+       int numero = 0;
+   
+      char continuar = 's';
+      while(continuar =='s'){
+            System.out.println("Insira um número:");
+            numero = sc.nextInt();
+            if(numero==0){
+                System.out.println("O numero é zero");
+            }
+            else if(numero>0){
+                System.out.println("O numero é positivo");
+            }
+            else{
+                System.out.println("O numero é negativo");
+            }
+            System.out.println("Deseja continuar? S -  Sim/ N - Nao");
+            continuar = sc.next().charAt(0);
+
+
+      }
+        
+    }
+    }
+
+
+8 - 
+
+ public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        float valorCarro = 0;
+        float valorDesconto = 0;
+        int anoCarro = 0 ;
+        float totalDesconto = 0;
+        char desejaContinuar = 's';
+        while(desejaContinuar == 's' || desejaContinuar == 'S'){
+            System.out.println("Insira o ano do carro:");
+            anoCarro = sc.nextInt();
+            System.out.println("Insira o valor do carro:");
+            valorCarro = sc.nextFloat();
+            if(anoCarro <= 2000){
+                valorDesconto = 0.12f;
+            }
+            else{
+                valorDesconto = 0.07f;
+            }
+            totalDesconto = valorCarro*valorDesconto;
+            valorCarro = valorCarro - totalDesconto;
+            System.out.println(totalDesconto);
+            System.out.println(valorCarro);
+            System.out.println("Deseja Continuar?");
+            desejaContinuar = sc.next().charAt(0);
+        }
+      
+
+    }

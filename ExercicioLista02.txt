@@ -1,0 +1,310 @@
+1. Crie um algoritmo que leia um número e escreva a sequência de zero até o número.
+
+   public static void main(String[] args) throws Exception {
+            for( int cont = 0; cont <=5; cont++){
+                System.out.println(cont);
+            }
+    }
+
+2. Crie um algoritmo que leia um número e escreva a sequência decrescente até o zero.
+
+    public static void main(String[] args) throws Exception {
+            for( int cont = 5; cont >=0; cont--){
+                System.out.println(cont);
+            }
+    }
+
+3. Crie um algoritmo que recebe 2 números e multiplica o num1 pelo num2 através de somas
+repetidas. (ex: 2 e 3 = 2 + 2 + 2).
+
+    public static void main(String[] args) throws Exception {
+        int num1, num2, soma;
+        System.out.println("Digite o numero 1");
+        Scanner sc = new Scanner(System.in);
+        num1 = sc.nextInt();
+        System.out.println("Digite o segundo numero:");
+        num2 = sc.nextInt();
+        soma =0;
+        for (int cont = 0; cont < num2; cont++){
+            soma += num1; 
+        }
+        System.out.println(soma);
+
+    }
+
+4. Escreva um algoritmo que exiba 20 vezes a mensagem “Eu gosto de estudar Algoritmos!”. 
+
+    public static void main(String[] args) throws Exception {
+            String frase = "Eu amo estudar algoritmos!";
+            for( int cont = 0; cont <20; cont++){
+                System.out.println(frase);
+            }
+
+    }
+5. Escreva um algoritmo que calcule a soma dos números de 1 a 15. 
+
+   public static void main(String[] args) throws Exception {
+        int soma = 0;
+        for(int cont = 0; cont<=15; cont++){
+            soma += cont; 
+        }
+        System.out.println(soma);
+
+    }
+
+6. Leia o nome do usuário e escreva o nome dele na tela 10 vezes. 
+
+    public static void main(String[] args) throws Exception {
+            System.out.println("Insira o nome do usuario");
+            String nome;
+            int i;
+            
+            Scanner sc = new Scanner(System.in);
+            nome = sc.nextLine();
+            for(i=1; i<=10; i++){
+                System.out.println(nome);
+            }
+
+    }
+
+7. Leia o nome um número do usuário um número N e escreva o nome dele na tela N vezes. 
+
+    public static void main(String[] args) throws Exception {
+      
+            String nome;
+            int i, n;      
+            System.out.println("Insira o nome do usuario");
+            Scanner sc = new Scanner(System.in);
+            nome = sc.nextLine();
+            System.out.println("Insira a quantidade de vezes");
+           n = sc.nextInt();
+            for(i=1; i<=n; i++){
+                System.out.println(nome);
+            }
+            
+
+    }
+
+8. Escreva um algoritmo que leia 10 números do usuário e calcule a soma desses números. 
+
+    public static void main(String[] args) throws Exception {
+      
+        int numero, soma, i;
+        soma =0;
+        numero =0;
+        Scanner sc = new Scanner(System.in);
+       
+        for (i = 1; i<=10; i++){
+            System.out.println("Insira o numero " + i +" :");
+            numero = sc.nextInt();
+            soma += numero;
+        }
+        System.out.println(soma);
+    }
+
+
+9. Leia a idade de 20 pessoas e exiba a soma das idades. 
+
+    public static void main(String[] args) throws Exception {
+      
+        int idade, soma, i;
+        soma =0;
+        idade =0;
+    
+        Scanner sc = new Scanner(System.in);
+       
+        for (i = 1; i<=20; i++){
+            System.out.println("Insira a idade da pessoa " + i +" :");
+            idade= sc.nextInt();
+            soma += idade;
+        }
+        System.out.println(soma);
+    }
+
+10. Leia a idade de 20 pessoas e exiba a média das idades. 
+
+    public static void main(String[] args) throws Exception {
+      
+        int idade, soma, i;
+        double media;
+        soma =0;
+        idade =0;
+        media =0;
+    
+        Scanner sc = new Scanner(System.in);
+       
+        for (i = 1; i<=20; i++){
+            System.out.println("Insira a idade da pessoa " + i +" :");
+            idade= sc.nextInt();
+            soma += idade;
+        }
+        media = soma/(i-1);
+        System.out.println(soma);
+        System.out.println(media);
+    }
+
+11. Leia a idade de 20 pessoas e exiba quantas pessoas são maiores de idade. 
+
+
+    public static void main(String[] args) throws Exception {
+      
+        int idade, i, cont;
+        cont =0;
+        idade =0;
+  
+    
+        Scanner sc = new Scanner(System.in);
+       
+        for (i = 1; i<=20; i++){
+            System.out.println("Insira a idade da pessoa " + i +" :");
+            idade= sc.nextInt();
+            if(idade>=18){
+                cont++;
+            }
+        }
+        System.out.println("A quantidade de pessoas maiores que 18 anos é: " + cont);
+        
+    }
+
+12. Leia o nome e a idade de 10 pessoas e exiba o nome da pessoa mais nova
+
+ public static void main(String[] args) throws Exception {
+      
+        String[] nomes = new String[10];
+        int[] idades = new int[10];
+        int idadeMaisNova = 99;
+        String nomeMaisNovo ="";
+        Scanner sc = new Scanner(System.in);
+        int i =0;
+                for(i=0; i<10; i++){
+                    System.out.println("Escreva o nome da pessoa: ");
+                    nomes[i] = sc.next();
+                    System.out.println("Escreva a idade da pessoa: ");
+                    idades[i] = sc.nextInt();
+                }
+
+                
+                for(i=0; i<10; i++){
+                   if(idades[i]<idadeMaisNova){
+                    idadeMaisNova = idades[i];
+                    nomeMaisNovo = nomes[i];
+
+                   }
+            
+                }
+                System.out.println(nomeMaisNovo);
+    }
+
+			OU
+
+    public static void main(String[] args) throws Exception {
+    
+        int idade = 0;
+        int cont = 99;
+        int i;
+        String nome =" ";
+        String nomeMaisnovo = " ";
+        Scanner sc = new Scanner(System.in);
+        for(i=0; i<3; i++ ){
+            System.out.println("Insira a idade da pessoa " + (i+1) + " :");
+            idade = sc.nextInt();
+            System.out.println("Insira o nome da pessoa " + (i+1) + " :");
+            nome = sc.next();
+            if(idade < cont){
+                cont = idade;
+                nomeMaisnovo = nome;
+            }
+        }
+        System.out.println(cont);
+        System.out.println(nomeMaisnovo);
+
+    }
+
+13. Crie um algoritmo leia um número do usuário e exiba a sua tabuada de multiplicação.
+    
+	public static void main(String[] args) throws Exception {
+      
+            int numero =0, i= 0;
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Insira um numero");
+            numero = sc.nextInt();
+
+            for(i =0; i <= 10; i++){
+                System.out.println("A multiplicação de " + i + " por " + numero + " é: " + (numero*i));
+            }
+
+    }
+
+14. Implemente um algoritmo que leia um número e uma opção de listagem. Com base nessa opção,
+escreva a sequência dos números em ordem crescente (de zero até o número) ou decrescente (do número até zero).
+ 1 – CRESCENTE
+ 2 - DECRESCENTE
+
+
+
+
+    public static void main(String[] args) throws Exception {
+        int numero;
+        int i =0;
+        int opcao = 0;
+        System.out.println("Insira o numero:");
+        Scanner sc = new Scanner(System.in);
+        numero = sc.nextInt();
+        System.out.println("Insira a opção: 1 - Ordem Crescente, 2 - Ordem Decrescente");
+        opcao = sc.nextInt();
+        if(opcao==1){
+            for(i =0; i <= numero; i++){
+                System.out.println(i);
+            }
+        }
+        else if(opcao==2){
+            for(i=0; i<=numero;i++){
+                System.out.println(numero - i);
+            }
+        }
+        else{
+            System.out.println("Opção invalida");
+        }
+        }
+    }
+
+15. Implemente um algoritmo que leia um número e realize a soma dos números entre zero e o número lido.
+
+    public static void main(String[] args) throws Exception {
+    
+        int numero =0;
+        int soma =0;
+        int i;
+        System.out.println("Insira um numero:");
+        Scanner sc = new Scanner(System.in);
+        numero = sc.nextInt();
+        for(i=0; i <=numero; i++){
+            soma += i;
+        }
+        System.out.println(soma);
+        
+    }
+16. Crie um algoritmo que recebe 2 números e multiplica o num1 pelo num2 através de somas repetidas.
+ (ex: 2 e 3 = 2 + 2 + 2).
+
+    public static void main(String[] args) throws Exception {
+    
+        int numero1 =0;
+        int numero2 =0;
+        int i;
+        int mult = 0;
+        System.out.println("Insira um numero:");
+        Scanner sc = new Scanner(System.in);
+        numero1 = sc.nextInt();
+        System.out.println("Insira outro numero:");
+        numero2 = sc.nextInt();
+        for(i=1; i <=numero2; i++){
+            mult += numero1;
+            
+        }
+        System.out.println(mult);
+        
+    }
+}
+
+

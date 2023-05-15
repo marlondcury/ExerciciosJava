@@ -1,0 +1,72 @@
+  Scanner sc = new Scanner(System.in);
+       int numero = 0;
+       int i;
+       float precoCusto = 0;
+       float precoVenda = 0;
+       float mediaPrecoCusto = 0;
+       float mediaPrecoVenda = 0;
+    //    for(i=0; i<2; i++){
+    //         System.out.println("Insira o preço de custo do produto " + (i+1) + " :");
+    //         precoCusto = sc.nextFloat();
+    //         System.out.println("Insira o preço de venda do produto " + (i+1) + " :");
+    //         precoVenda = sc.nextFloat();
+    //         if(precoCusto==precoVenda){
+    //             System.out.println("Não houve lucro nem prejuizo");
+    //         }
+    //         else if( precoCusto<precoVenda){
+    //             System.out.println("Houve lucro");
+    //         }
+    //         else{
+    //             System.out.println("Houve prejuizo");
+    //         }
+    //         mediaPrecoCusto += precoCusto;
+    //         mediaPrecoVenda += precoVenda;
+    //    }
+    //    mediaPrecoCusto = mediaPrecoCusto/i;
+    //    mediaPrecoVenda = mediaPrecoVenda/i;
+    //    System.out.println(mediaPrecoCusto);
+    //    System.out.println(mediaPrecoVenda);
+
+
+       Pessoa novapessoa = new Pessoa();
+       System.out.println(novapessoa);
+       novapessoa.setPeso(80);
+       novapessoa.getPeso();
+    //    novapessoa.setAltura(1.70);
+    //    novapessoa.getAltura();
+       System.out.println(novapessoa.calcularImc());
+
+        
+    }
+    }
+
+class Pessoa{
+
+   private float peso;
+   private float altura;
+
+   public float calcularImc(){
+
+    float imc = peso/(peso*peso);
+    return imc;
+   }
+
+   public void setPeso(float peso){
+        this.peso = peso;
+   }
+
+   public float getPeso()-{
+        return peso;
+   }
+
+   public void setAltura(float altura){
+    this.altura = altura;
+   }
+
+   public float getALtura(){
+        return altura;
+
+   }
+}
+
+    
