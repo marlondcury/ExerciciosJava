@@ -1,0 +1,59 @@
+1. Insira dois número e diga qual é o maior:
+
+public class App {
+    public static void main(String[] args) throws Exception {
+     int numero1;
+     int numero2;
+     Scanner sc = new Scanner(System.in);
+     System.out.println("insira o primeiro numero:");
+     numero1 = sc.nextInt();
+     System.out.println("insira o segundo numero:");
+     numero2 = sc.nextInt();
+     if(numero1 > numero2){
+        System.out.println("o numero: " + numero1 + " é maior.");
+     }
+     else{
+        System.out.println("O numero: " + numero2 + " é maior.");
+     }
+    }
+}
+
+2. Insira um numero e diga se ele é positivo ou negativo
+
+public class App {
+    public static void main(String[] args) throws Exception {
+     int numero1;
+     Scanner sc = new Scanner(System.in);
+     System.out.println("insira o  numero:");
+     numero1 = sc.nextInt();
+     if(numero1 >= 0){
+        System.out.println("o numero: " + numero1 + " é positivo.");
+     }
+     else{
+        System.out.println("O numero: " + numero1 + " é negativo.");
+     }
+    }
+}
+
+3. Verique se a letra digitada é "f" ou "m", escreva "feminino", "masculino" ou "inválido" conforme a letra digitada.
+
+
+public class App {
+    public static void main(String[] args) throws Exception {
+     String numero1;
+     Scanner sc = new Scanner(System.in);
+     System.out.println("insira a letra:");
+     numero1 = sc.next();
+     if(numero1.equalsIgnoreCase("M")){
+        System.out.println("Masculino");
+     }
+     else if(numero1.equalsIgnoreCase("f")) {
+        System.out.println("Feminino");
+     }
+
+     else{
+        System.out.println("invalido");
+     }
+    }
+}
+4.
